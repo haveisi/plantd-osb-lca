@@ -1,47 +1,133 @@
 # Plantd vs OSB — Screening LCA Workflow
 
-## What this is
+## Overview
 
-A structured, reproducible workflow to build a **screening-level life cycle assessment (LCA)** comparing:
+This project develops a structured and reproducible workflow for a screening-level life cycle assessment (LCA) comparing:
 
 - Plantd structural panels  
-- Conventional OSB structural panels  
+- Conventional OSB (Oriented Strand Board) structural panels  
 
-Built using:
-- Excel (data extraction)
-- Python (data cleaning + modeling)
-- openLCA-ready structure
+The workflow integrates Excel-based data extraction with Python-driven data cleaning, modeling, and visualization. Outputs are structured to support future integration with openLCA.
 
 ---
 
-## Why this matters
+## Objective
 
-Structural panels are widely used in construction.  
-Even small reductions in embodied carbon scale quickly.
-
-This project explores whether a **bio-based structural panel (Plantd)** could reduce emissions compared to **OSB**, which is the real benchmark.
+The objective is to assess whether a bio-based structural panel (Plantd) may offer lower embodied carbon compared to conventional OSB, which serves as the appropriate structural benchmark.
 
 ---
 
-## Functional unit
+## Functional Unit
 
-**1 m² structural panel**  
-Used for wall or roof sheathing.
-
----
-
-## System boundary
-
-**Cradle-to-gate (screening level)**
+1 m² of structural panel used for wall or roof sheathing, assuming equivalent functional performance.
 
 ---
 
-## Workflow
+## System Boundary
 
-### 1. Data extraction
-- Extracted from technical reports and LCA literature  
-- Stored in Excel  
+Cradle-to-gate (screening-level boundary)
 
-### 2. Data cleaning
-```text
-src/02_clean_openlca_inputs.py
+---
+
+## Methodological Approach
+
+### Data Sources
+- Plantd structural panel technical report  
+- LCA literature on bio-based construction panels  
+- Comparative studies of conventional building materials  
+
+### Workflow
+
+**1. Data Extraction**  
+Data were extracted from technical documents and literature and compiled into a structured Excel dataset.
+
+**2. Data Cleaning and Structuring**  
+`src/02_clean_openlca_inputs.py`  
+- Standardized variable names  
+- Structured inputs for modeling  
+- Exported cleaned dataset  
+
+**3. Screening Model Development**  
+`src/03_build_screening_model.py`  
+- Established OSB baseline scenarios  
+- Developed Plantd emission estimates  
+- Calculated comparative performance  
+
+**4. Visualization**  
+`src/04_make_chart.py`  
+- Generated comparative emissions chart  
+
+**5. LCA Process Structuring**  
+`src/05_build_lca_structure.py`  
+- Translated extracted inputs into LCA-style flows  
+- Constructed a simplified foreground process model  
+
+---
+
+## Results (Screening Level)
+
+| Scenario      | GWP (kg CO2e/m²) |
+|--------------|------------------|
+| OSB (low)    | 20 |
+| OSB (mid)    | 25 |
+| OSB (high)   | 30 |
+| Plantd (low) | 10 |
+| Plantd (mid) | 14 |
+| Plantd (high)| 18 |
+
+Estimated reduction relative to the OSB midpoint scenario is approximately 30% to 60%.
+
+---
+
+## Foreground LCA Process Structure
+
+A simplified foreground process was constructed to represent the Plantd panel using the following input categories:
+
+- Biomass feedstock (plant strands)  
+- Binder or resin  
+- Electricity for manufacturing  
+- Thermal energy for drying and pressing  
+- Transport of biomass  
+- Packaging  
+
+Where primary data were unavailable, placeholder values were introduced and explicitly flagged. This preserves model structure while maintaining transparency and enabling future refinement.
+
+---
+
+## Outputs
+
+- Cleaned dataset: `outputs/openlca_input_table_clean.csv`  
+- Screening model results: `outputs/screening_gwp_results.csv`  
+- LCA structure file: `outputs/plantd_lca_structure.csv`  
+- Visualization: `outputs/plantd_vs_osb_screening_chart.png`  
+
+---
+
+## Limitations
+
+This analysis is a screening-level assessment and does not constitute a full LCA.
+
+The Plantd technical documentation provides structural and performance data but does not include a complete life cycle inventory (LCI). Key missing elements include:
+
+- Material composition and mass per functional unit  
+- Binder/resin type and proportion  
+- Manufacturing energy consumption  
+- Transport distances and logistics  
+- End-of-life assumptions  
+
+All results should therefore be interpreted as preliminary estimates.
+
+---
+
+## Path to Full LCA
+
+To develop a complete and verifiable LCA, the following steps are required:
+
+- Incorporate an OSB Environmental Product Declaration (EPD) or database dataset  
+- Develop a detailed Plantd foreground inventory  
+- Integrate with an LCA database (e.g., ecoinvent) in openLCA  
+- Apply a recognized LCIA method (e.g., IPCC GWP 100a)  
+
+---
+
+## Project Structure
