@@ -131,3 +131,50 @@ To develop a complete and verifiable LCA, the following steps are required:
 ---
 
 ## Project Structure
+
+```
+
+plantd-osb-lca/
+│
+├── data/
+│   └── Plantd_openLCA_extracted_dataset.xlsx
+│
+├── outputs/
+│   ├── openlca_input_table_clean.csv
+│   ├── screening_gwp_results.csv
+│   ├── plantd_lca_structure.csv
+│   └── plantd_vs_osb_screening_chart.png
+│
+├── src/
+│   ├── 01_read_excel.py
+│   ├── 02_clean_openlca_inputs.py
+│   ├── 03_build_screening_model.py
+│   ├── 04_make_chart.py
+│   └── 05_build_lca_structure.py
+│
+├── docs/
+│   └── methodology.md
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+
+```
+
+---
+
+## Key Takeaways
+
+This project demonstrates:
+
+- Structuring incomplete sustainability data into a usable analytical format  
+- Developing a transparent and reproducible screening model  
+- Explicitly handling data gaps in LCA modeling  
+- Preparing datasets for integration into professional LCA tools  
+
+---
+
+## Disclaimer
+
+This project is intended for analytical and educational purposes. Results should not be interpreted as verified environmental performance claims.
+```
