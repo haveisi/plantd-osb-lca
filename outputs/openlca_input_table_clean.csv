@@ -1,0 +1,24 @@
+scenario,reference_flow,reference_amount,unit,process___exchange,value,unit.1,data_status,how_to_use_in_openlca,source___note
+Plantd foreground model,Plantd structural panel,1,m²,Panel thickness,11.11,mm,Known,Set as product property or parameter,LCA.pdf (7/16 in)
+Plantd foreground model,Plantd structural panel,1,m²,Feedstock,Poaceae plant strands,,Known but vague,Create placeholder biomass input; replace when species is known,LCA.pdf
+Plantd foreground model,Plantd structural panel,1,m²,Panel mass,MISSING,,Missing,You need kg/m² before real modeling starts,Not disclosed
+Plantd foreground model,Plantd structural panel,1,m²,Binder / resin,MISSING,,Missing,Cannot select background dataset yet,Not disclosed
+Plantd foreground model,Plantd structural panel,1,m²,Electricity for manufacturing,MISSING,kWh,Missing,Request plant-specific or modeled proxy,Not disclosed
+Plantd foreground model,Plantd structural panel,1,m²,Thermal energy for drying/pressing,MISSING,MJ,Missing,Request plant-specific or modeled proxy,Not disclosed
+Plantd foreground model,Plantd structural panel,1,m²,Inbound transport of biomass,MISSING,tkm,Missing,Request supplier radius and mode,Not disclosed
+Plantd foreground model,Plantd structural panel,1,m²,Packaging,MISSING,,Missing,"Optional at screening stage, needed for final LCA",Not disclosed
+Plantd function check,Plantd structural panel,1,m²,OSB equivalence proxy,7/16 24/0 OSB,,Known,Use as functional comparison scenario,LCA.pdf
+Comparator proxy,Magnesium-hemp panel,1,m²,Total GWP,12.7,kg CO2e,Known,"Good low-carbon proxy benchmark, not same product type",LCA1.pdf
+Comparator proxy,Magnesium-hemp panel,1,m²,Total thickness,370,mm,Known,Use only in wall/panel low-carbon benchmark scenario,LCA1.pdf
+Comparator proxy,Filled wood frame + mineral wool,1,m²,Total GWP,16.1,kg CO2e,Known,Closest conventional number in uploaded files,LCA1.pdf
+Comparator proxy,Light straw clay wall,1,m²,Wall thickness,305,mm,Known,Useful natural wall comparator if you model assemblies,LCA2.pdf
+Comparator proxy,Cob wall,1,m²,Wall thickness,457,mm,Known,Assembly comparator only,LCA2.pdf
+Comparator proxy,Rammed earth wall,1,m²,Wall thickness,457,mm,Known,Assembly comparator only,LCA2.pdf
+Comparator proxy,Insulated wood frame wall,1,m²,Insulation value,3.06,m²K/W,Known,Useful wall assembly comparator,LCA2.pdf
+Comparator proxy,Insulated CMU wall,1,m²,Insulation value,4.19,m²K/W,Known,Useful wall assembly comparator,LCA2.pdf
+Sensitivity case,Plantd panel,1,m²,Mass scenario low,7,kg/m²,Assumption,Replace with real value later,Analyst placeholder
+Sensitivity case,Plantd panel,1,m²,Mass scenario mid,10,kg/m²,Assumption,Replace with real value later,Analyst placeholder
+Sensitivity case,Plantd panel,1,m²,Mass scenario high,13,kg/m²,Assumption,Replace with real value later,Analyst placeholder
+Sensitivity case,Plantd panel,1,m²,Resin fraction low,5,% by mass,Assumption,Use if no BOM is available,Analyst placeholder
+Sensitivity case,Plantd panel,1,m²,Resin fraction mid,10,% by mass,Assumption,Use if no BOM is available,Analyst placeholder
+Sensitivity case,Plantd panel,1,m²,Resin fraction high,15,% by mass,Assumption,Use if no BOM is available,Analyst placeholder

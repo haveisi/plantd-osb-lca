@@ -1,0 +1,7 @@
+scenario,material,functional_unit,gwp_kgco2e_per_m2,data_quality,note,reduction_vs_osb_mid_percent
+OSB_low,Conventional OSB panel,1 m2 structural panel,20,proxy estimate,Low baseline estimate,20.0
+OSB_mid,Conventional OSB panel,1 m2 structural panel,25,proxy estimate,Mid baseline estimate,0.0
+OSB_high,Conventional OSB panel,1 m2 structural panel,30,proxy estimate,High baseline estimate,-20.0
+Plantd_low,Plantd structural panel,1 m2 structural panel,10,screening estimate,Needs real Plantd LCI,60.0
+Plantd_mid,Plantd structural panel,1 m2 structural panel,14,screening estimate,Needs real Plantd LCI,44.0
+Plantd_high,Plantd structural panel,1 m2 structural panel,18,screening estimate,Needs real Plantd LCI,28.0
