@@ -1,0 +1,24 @@
+flow_name,amount,unit,type,data_quality
+Panel thickness,11.11,m²,input,reported
+Feedstock,Poaceae plant strands,m²,input,reported
+Panel mass,1,m²,input,assumed
+Binder / resin,1,m²,input,assumed
+Electricity for manufacturing,1,m²,input,assumed
+Thermal energy for drying/pressing,1,m²,input,assumed
+Inbound transport of biomass,1,m²,input,assumed
+Packaging,1,m²,input,assumed
+OSB equivalence proxy,7/16 24/0 OSB,m²,input,reported
+Total GWP,12.7,m²,input,reported
+Total thickness,370,m²,input,reported
+Total GWP,16.1,m²,input,reported
+Wall thickness,305,m²,input,reported
+Wall thickness,457,m²,input,reported
+Wall thickness,457,m²,input,reported
+Insulation value,3.06,m²,input,reported
+Insulation value,4.19,m²,input,reported
+Mass scenario low,7,m²,input,reported
+Mass scenario mid,10,m²,input,reported
+Mass scenario high,13,m²,input,reported
+Resin fraction low,5,m²,input,reported
+Resin fraction mid,10,m²,input,reported
+Resin fraction high,15,m²,input,reported
